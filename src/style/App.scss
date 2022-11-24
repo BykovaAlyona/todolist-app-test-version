@@ -47,6 +47,9 @@
 
   .list {
     min-height: 200px;
+    li{
+      border-bottom: 1px solid $color-light-sea;
+    }
 
     input[type="checkbox"] {
       &:checked,
@@ -62,6 +65,7 @@
       }
       &:checked + label {
         color: $color-sea-d;
+        text-decoration: line-through;
       }
       &:not(:checked) + label {
         svg {

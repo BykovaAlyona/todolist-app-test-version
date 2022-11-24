@@ -9,11 +9,12 @@ function TaskItemComponent() {
         changeList.list.map(item => {
             return <li key={item.id}>
                 <input type="checkbox" name="listtasks"
+                    onChange={i => changeList.updateItem(item, i.target.checked)}
                     id={"checkbox" + item.id} defaultChecked={item.completed} />
                 <label htmlFor={"checkbox" + item.id}>
                     <Checked /><span>{item.title}</span>
                 </label>
-                <button><GarbageBin /></button>
+                <button onClick={() => changeList.deleteItem(item)}><GarbageBin /></button>
             </li>
         });
 

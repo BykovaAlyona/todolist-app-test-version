@@ -5,18 +5,28 @@
   },
   "tasks": [
     {
-      "id": "1",
-      "title": "задача #1",
+      "id": 1,
+      "title": "задача №1",
       "completed": false
     },
     {
-      "id": "2",
-      "title": "задача #2",
+      "id": 2,
+      "title": "задача №2",
       "completed": true
     },
     {
-      "id": "3",
-      "title": "задача #3",
+      "id": 3,
+      "title": "задача №3",
+      "completed": false
+    },
+    {
+      "id": 4,
+      "title": "задача №154",
+      "completed": true
+    },
+    {
+      "id": 5,
+      "title": "задача №67",
       "completed": false
     }
   ]
