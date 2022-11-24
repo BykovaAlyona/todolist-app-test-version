@@ -1,0 +1,23 @@
+{
+  "signin": {
+    "login": "todolist",
+    "password": "852456"
+  },
+  "tasks": [
+    {
+      "id": "1",
+      "title": "задача #1",
+      "completed": false
+    },
+    {
+      "id": "2",
+      "title": "задача #2",
+      "completed": true
+    },
+    {
+      "id": "3",
+      "title": "задача #3",
+      "completed": false
+    }
+  ]
+}

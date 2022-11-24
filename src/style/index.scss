@@ -1,0 +1,101 @@
+@import "_variables.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 800px;
+  min-width: 280px;
+  margin: auto;
+
+  &,
+  input,
+  button,
+  label,
+  select {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+      "Droid Sans", "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: $color-dark-sea;
+    font-size: 18px;
+  }
+  &,
+  #root {
+    width: 100%;
+    min-height: 100vh;
+  }
+  #root {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    background-color: $color-dark;
+  }
+  @media (prefers-color-scheme: light) {
+    background-color: $color-light;
+  }
+
+  hr {
+    height: 2px;
+    background-color: $color-sea-l;
+    border: none;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+
+  svg {
+    width: 15px;
+    height: 15px;
+    fill: $color-sea-l;
+  }
+
+  input[type="submit"],
+  button {
+    background-color: $color-sea-d;
+    color: $color-light-sea;
+
+    svg {
+      fill: $color-sea-l;
+    }
+
+    &:active {
+      background-color: $color-dark-sea;
+      color: $color-sea-d;
+      svg {
+        fill: $color-sea-d;
+      }
+    }
+  }
+
+  input,
+  button,
+  select {
+    padding: 5px 10px;
+    border: 2px solid $color-sea-l;
+    border-radius: 5px;
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  label {
+    display: block;
+  }
+
+  ul {
+    list-style: none;
+    li {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      gap: 5px;
+    }
+  }
+}

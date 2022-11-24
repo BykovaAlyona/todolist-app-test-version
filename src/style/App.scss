@@ -1,0 +1,76 @@
+@import "_variables.scss";
+
+.App {
+  width: 100%;
+  padding: 10px;
+}
+.SignIn {
+  max-width: 300px;
+  padding: 50px 30px;
+  border-radius: 30px;
+  margin: auto;
+  background: linear-gradient(-30deg, $color-sea-l, $color-light-sea);
+  input,
+  button {
+    margin: 15px auto;
+  }
+}
+.ToDoList {
+  width: 100%;
+  padding: 30px;
+  border-radius: 30px;
+  margin: auto;
+  background: linear-gradient(-30deg, $color-sea-l, $color-light-sea);
+
+  .add-task,
+  .list-filter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+    button svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  button {
+    padding: 5px;
+    font-size: 0px;
+  }
+
+  input[type="text"] {
+    width: 100%;
+  }
+
+  .list {
+    min-height: 200px;
+
+    input[type="checkbox"] {
+      &:checked,
+      &:not(:checked) {
+        display: none;
+      }
+      & + label {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 7px;
+      }
+      &:checked + label {
+        color: $color-sea-d;
+      }
+      &:not(:checked) + label {
+        svg {
+          fill: $color-sea-d;
+          .check-mark {
+            fill: transparent;
+          }
+        }
+      }
+    }
+  }
+}
